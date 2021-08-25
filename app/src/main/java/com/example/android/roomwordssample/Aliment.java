@@ -39,16 +39,23 @@ public class Aliment {
     @NonNull
     @ColumnInfo(name = "aliment")
     private String mAliment;
-    // private String mTrigramme;
+
+    @NonNull
+    @ColumnInfo(name = "trigramme")
+    private String mTrigramme;
 
 
 
-    public Aliment(@NonNull String aliment) {
+    public Aliment(@NonNull String aliment, @NonNull String trigramme) {
         this.mAliment = aliment;
+        this.mTrigramme = trigramme;
     }
 
     @NonNull
-    public String getAliment() {
+    public String getAlimentName() {
         return this.mAliment;
     }
+
+    @NonNull
+    public String getAlimehtTrigramme() { return this.mTrigramme; }
 }
