@@ -39,6 +39,7 @@ public class Aliment {
     @NonNull
     @ColumnInfo(name = "aliment")
     private String mAliment;
+    // private String mTrigramme;
 
 
 
