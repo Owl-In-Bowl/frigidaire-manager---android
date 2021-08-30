@@ -32,12 +32,14 @@ public class NewAlimentActivity extends AppCompatActivity {
     public static final String EXTRA_REPLY = "com.example.android.wordlistsql.REPLY";
 
     private EditText mEditAlimentView;
+    private EditText mEditTrigrammeView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_aliment);
         mEditAlimentView = findViewById(R.id.edit_aliment);
+        mEditTrigrammeView = findViewById(R.id.edit_trigramme);
 
         final Button button = findViewById(R.id.button_save);
         button.setOnClickListener(view -> {

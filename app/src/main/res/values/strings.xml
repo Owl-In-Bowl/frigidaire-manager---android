@@ -15,7 +15,8 @@ limitations under the License. -->
 <resources>
     <string name="app_name">RoomWordsSample</string>
     <string name="action_settings">Settings</string>
-    <string name="hint_word">Word…</string>
+    <string name="hint_aliment">Aliment…</string>
+    <string name="hint_trigramme">Trigramme…</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
     <string name="add_word">Add aliment</string>

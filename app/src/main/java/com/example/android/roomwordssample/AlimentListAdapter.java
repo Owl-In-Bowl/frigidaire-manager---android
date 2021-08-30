@@ -37,7 +37,7 @@ public class AlimentListAdapter extends ListAdapter<Aliment, AlimentViewHolder> 
     @Override
     public void onBindViewHolder(AlimentViewHolder holder, int position) {
         Aliment current = getItem(position);
-        holder.bind(current.getAliment());
+        holder.bind(current.getAlimentName());
     }
 
     static class AlimentDiff extends DiffUtil.ItemCallback<Aliment> {
@@ -49,7 +49,7 @@ public class AlimentListAdapter extends ListAdapter<Aliment, AlimentViewHolder> 
 
         @Override
         public boolean areContentsTheSame(@NonNull Aliment oldItem, @NonNull Aliment newItem) {
-            return oldItem.getAliment().equals(newItem.getAliment());
+            return oldItem.getAlimentName().equals(newItem.getAlimentName());
         }
     }
 }

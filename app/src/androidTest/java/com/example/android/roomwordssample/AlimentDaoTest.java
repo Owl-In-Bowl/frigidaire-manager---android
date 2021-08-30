@@ -68,28 +68,28 @@ public class AlimentDaoTest {
 
     @Test
     public void insertAndGetAliment() throws Exception {
-        Aliment aliment = new Aliment("aliment");
+        Aliment aliment = new Aliment("aliment", "LIM");
         mAlimentDao.insert(aliment);
         List<Aliment> allAliments = LiveDataTestUtil.getValue(mAlimentDao.getAlphabetizedWords());
-        assertEquals(allAliments.get(0).getAliment(), aliment.getAliment());
+        assertEquals(allAliments.get(0).getAlimentName(), aliment.getAlimentName());
     }
 
     @Test
     public void getAllAliment() throws Exception {
-        Aliment aliment = new Aliment("aaa");
+        Aliment aliment = new Aliment("aaa", "AAA");
         mAlimentDao.insert(aliment);
-        Aliment aliment2 = new Aliment("bbb");
+        Aliment aliment2 = new Aliment("bbb", "BBB");
         mAlimentDao.insert(aliment2);
         List<Aliment> allAliments = LiveDataTestUtil.getValue(mAlimentDao.getAlphabetizedWords());
-        assertEquals(allAliments.get(0).getAliment(), aliment.getAliment());
-        assertEquals(allAliments.get(1).getAliment(), aliment2.getAliment());
+        assertEquals(allAliments.get(0).getAlimentName(), aliment.getAlimentName());
+        assertEquals(allAliments.get(1).getAlimentName(), aliment2.getAlimentName());
     }
 
     @Test
     public void deleteAll() throws Exception {
-        Aliment aliment = new Aliment("word");
+        Aliment aliment = new Aliment("word", "WOR");
         mAlimentDao.insert(aliment);
-        Aliment aliment2 = new Aliment("word2");
+        Aliment aliment2 = new Aliment("word2", "WOR");
         mAlimentDao.insert(aliment2);
         mAlimentDao.deleteAll();
         List<Aliment> allAliments = LiveDataTestUtil.getValue(mAlimentDao.getAlphabetizedWords());

@@ -73,9 +73,9 @@ abstract class AlimentRoomDatabase extends RoomDatabase {
                 AlimentDao dao = INSTANCE.alimentDao();
                 dao.deleteAll();
 
-                Aliment aliment = new Aliment("Hello");
+                Aliment aliment = new Aliment("Courgettes", "LEG");
                 dao.insert(aliment);
-                aliment = new Aliment("World");
+                aliment = new Aliment("Yaourt", "LAI");
                 dao.insert(aliment);
             });
         }

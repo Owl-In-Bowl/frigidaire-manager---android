@@ -25,11 +25,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 class AlimentViewHolder extends RecyclerView.ViewHolder {
     private final TextView alimentItemView;
+    private final TextView trigrammeItemView;
 
     private AlimentViewHolder(View itemView) {
         super(itemView);
         alimentItemView = itemView.findViewById(R.id.AlimentTV);
-            }
+        trigrammeItemView = itemView2.findViewById(R.id.TriTV);
+    }
 
     public void bind(String aliment) {
         alimentItemView.setText(aliment);

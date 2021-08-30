@@ -57,5 +57,5 @@ public class Aliment {
     }
 
     @NonNull
-    public String getAlimehtTrigramme() { return this.mTrigramme; }
+    public String getAlimentTrigramme() { return this.mTrigramme; }
 }
